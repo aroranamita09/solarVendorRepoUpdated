@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <style>
+  h1{
+      color: navy;
+  }
+
+form li{
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+form ul{
+    padding-left: 0;
+}
+
+label{
+    
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    padding-bottom: 8px;
+}
+textarea{
+    padding: 10;
+    width: 300px;
+    height: 30px;
+    background: white;
+
+}
+
+        </style>
+        <h1>Welcome to the Renewable Energy Forum.Here You can enter your data and we will generate a forum for you to connect to your audience,Just on a click of Go. </h1>
+
+        <form action="/" method="POST">
+            <ul>
+                <li>
+                    <label for="name">Enter Your Registered Company Name:</label>
+                    <input type="text" name="Input" id="name">
+                </li>
+
+                <li>
+                    <label for="companyAddress">Enter your Registered Office Address:</label>
+                    <textarea name="companyAddress" id="companyAddress" ></textarea>
+                </li>
+                <li>
+                        <label for="email">Enter your Registered email-id</label>
+                        <input name="email" id="email" ></input>
+                    </li>
+
+                <li>
+                    <label for="deliveryPlaces">Enter the name of places where you supply your products:</label>
+                    <input type="text" name="deliveryPlaces" id="deliveryPlaces">
+                </li>
+
+                <li>
+                    <label for="date">Hey vendor ,Whether you sell your parts to dealers or you supply only to business companies. </label>
+                    <input type="date" name="date" id="date">
+                </li>
+                <li>
+                     <button type="button" class="btn btn-primary">
+                            <input type="submit"> <span class="badge badge-light">Here you go</span>
+                     </button>                    
+                </li>  
+            </ul>           
+        </form>
+    </body>
+</html>

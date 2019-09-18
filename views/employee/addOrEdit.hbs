@@ -1,0 +1,62 @@
+<style>
+    .dropdown{
+        margin-top: 35px;
+    
+    }
+    p{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .viewall{
+        display: none;
+    }
+</style>
+
+<p>Welcome to the Renewable Energy Forum. Here You can enter your data and 
+    we will generate a forum for you to connect to your audience,
+    Just on a click of Go. Welcome to the Renewable Energy Forum.
+     Here You can enter your data and we will generate a forum for you to connect
+     to your audience, Just on a click of Go.</p>
+
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Registered Company Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Registered Company Name" value="{{employee.fullName}}">
+        <div class="text-danger">
+            {{employee.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" name="email" placeholder="Address" value="{{employee.email}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Email ID</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Email ID" value="{{employee.mobile}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Places where you supply your products</label>
+            <input type="text" class="form-control" name="city" placeholder="Cities where supply is available" value="{{employee.city}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Do you Supply to dealers or consumers as well?</label>
+            <input type="text" class="form-control" name="xyz" placeholder="Supplies to" value="{{employee.city}}">
+        </div>
+        <div class="form-group col-md-6 dropdown">
+            <label>Choose your Domain</label>
+            <select>
+                <option value="Vendor">Vendor</option>
+                <option value="Supplier">Supplier</option>
+                <option value="Distributor of companies">Distributor of companies</option>
+                <option value="EPC">EPC</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary viewall" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
